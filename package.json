@@ -2,7 +2,7 @@
   "name": "todo-list",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "render.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -16,7 +16,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "date-fns": "^3.0.6",
+    "date-fns": "^3.3.1",
     "lodash": "^4.17.21"
   }
 }

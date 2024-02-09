@@ -5,6 +5,10 @@ export function createTodo(title){
         
         tasks.push({title: title});
     }
-    console.log(tasks);
     return tasks;
+}
+
+export function addDate(date, index){
+    tasks[index].date = date;
+    console.log(tasks);
 }

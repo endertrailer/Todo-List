@@ -137,7 +137,7 @@ html, *{
 
 .todo{
     display: grid;
-    grid-template-columns: 30px 1fr ;
+    grid-template-columns: 30px 1fr 140px;
     align-items: center;
     margin-left: 27px;
     padding-left: 20px;
@@ -159,6 +159,24 @@ html, *{
     margin-left: 3px;
     margin-bottom: 3px;
     /* font-family: "Lemon", sans-serif; */
+}
+
+.date-box{
+    display: grid;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.date:hover{
+    cursor: pointer;
+}
+
+.date{
+    background-color: inherit;
+    border: black 1px solid;
+    border-radius: 7px;
+    font-size: 15px;
+    height: 22px;
 }
 
 .checkbox{
@@ -231,4 +249,39 @@ html, *{
     background-color: rgb(243, 67, 67);
     border: 1px gray solid;
     cursor: pointer;
+}
+
+.project-body{
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    padding-top: none;
+    /* padding: 25px; */
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+.add-project{
+    grid-template-columns: 50px 1fr;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(49, 48, 48);
+    display: grid;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 17px;
+    
+}
+
+.project-img{
+    display: grid;
+    justify-self: center;
+    height: 15px;
+    width: 15px;
+}
+
+.add-project:hover{
+    background-color: rgb(190, 186, 186);
+    cursor: pointer;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
 }

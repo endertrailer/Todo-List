@@ -13,21 +13,25 @@
         </div>
         <div class="sidebar">
             <div class="taskmanager">
-                <div class="task">
-                    <img src="file:///home/endertrailer/Downloads/envelope%20(1).svg" alt="xsxs" class="inbox">
+                <div class="task" id="inboxbtn">
+                    <img src="../src/images/envelope (1).svg" alt="xsxs" class="inbox">
                     Inbox</div>
-                <div class="task">
-                    <img src="file:///home/endertrailer/Downloads/calendar-day.svg" alt="calendar-day" class="inbox">
+                <div class="task" id="today">
+                    <img src="../src/images/calendar-day.svg" alt="calendar-day" class="inbox">
                     Today</div>
-                <div class="task">
-                <img src="file:///home/endertrailer/Downloads/calendar.svg" alt="calendar" class="inbox">    
+                <div class="task" id="week">
+                <img src="../src/images/calendar.svg" alt="calendar" class="inbox">    
                 This Week</div>
             </div>
-            <div class="project">
+            <div class="project"> 
                 <div class="project-title">
                     Projects
                 </div>
-                <div class="project-body"></div>
+                <div class="project-body">
+                    <div class="add-project">
+                        <img src="../src/images/plus.svg" alt="add task" class="project-img"> Add Project
+                    </div>
+                </div>
             </div>
         </div>
         <div class="bottombar"></div>
@@ -37,9 +41,11 @@
             <!-- <div class="todo">
                 <img src="file:///home/endertrailer/Downloads/check_box_outline_blank_FILL0_wght400_GRAD-25_opsz24.svg" alt="checkbox" class="checkbox">
                 <div class="todo-title">pizza</div>
+                <div class="date-box"><input type="date" id="date"></div>
             </div> -->
+
              <div class="addtask">
-            <img src="file:///home/endertrailer/Downloads/plus.svg" alt="add task" class="addimg"> Add task
+            <img src="../src/images/plus.svg" alt="add task" class="addimg"> Add task
         </div>
         <!-- <label for="title">enter title:</label> -->
         <input type="text" id="title">

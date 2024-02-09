@@ -1,15 +1,17 @@
-import { dateChange } from "./dates.js";
+import { isThisWeek } from "date-fns";
 
-export function render(tasks){
-    
-// const taskManager = document.querySelector('.taskmanager')
+
+export function renderWeek(tasks){
+const addTask = document.querySelector('.addtask');
 const main_box = document.querySelector('.main-box');
 const inbox_title = document.querySelector('.inbox-title');
-const addTask = document.querySelector('.addtask');
-addTask.style.display = 'grid';
-inbox_title.textContent = 'Inbox';
+addTask.style.display = 'none';
+inbox_title.textContent = 'This Week';
+let j = 0;
+
 for(let i = 0; i < tasks.length; i++){
-    console.log(tasks);
+    console.log(isThisWeek(tasks[i].date));
+    if(isThisWeek(tasks[i].date)) {
     const todo = document.createElement('div');
     todo.classList.add('todo');
     const title = document.createElement('div');
@@ -31,11 +33,9 @@ for(let i = 0; i < tasks.length; i++){
     todo.appendChild(checkbox); 
     todo.appendChild(title);
     todo.appendChild(date_box);
-    todo.style.gridRowStart = `${i + 2}`;
+    todo.style.gridRowStart = `${j + 2}`;
     main_box.appendChild(todo);
+    j++;
     }
-    addTask.style.gridRowStart = `${tasks.length + 2}`
-    dateChange();
+  }
 }
-// render(createTodo());
-// 
