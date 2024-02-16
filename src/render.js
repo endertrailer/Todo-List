@@ -6,6 +6,8 @@ export function render(tasks){
 const main_box = document.querySelector('.main-box');
 const inbox_title = document.querySelector('.inbox-title');
 const addTask = document.querySelector('.addtask');
+const addProjectTask = document.querySelector('.add-project-task');
+addProjectTask.style.display = 'none';
 addTask.style.display = 'grid';
 inbox_title.textContent = 'Inbox';
 for(let i = 0; i < tasks.length; i++){

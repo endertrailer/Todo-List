@@ -5,12 +5,13 @@ export function renderWeek(tasks){
 const addTask = document.querySelector('.addtask');
 const main_box = document.querySelector('.main-box');
 const inbox_title = document.querySelector('.inbox-title');
+const addProjectTask = document.querySelector('.add-project-task');
+addProjectTask.style.display = 'none';
 addTask.style.display = 'none';
 inbox_title.textContent = 'This Week';
 let j = 0;
 
 for(let i = 0; i < tasks.length; i++){
-    console.log(isThisWeek(tasks[i].date));
     if(isThisWeek(tasks[i].date)) {
     const todo = document.createElement('div');
     todo.classList.add('todo');

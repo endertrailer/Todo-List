@@ -268,7 +268,7 @@ html, *{
     display: grid;
     align-items: center;
     border-radius: 5px;
-    font-size: 17px;
+    font-size: 19px;
     
 }
 
@@ -280,8 +280,88 @@ html, *{
 }
 
 .add-project:hover{
-    background-color: rgb(190, 186, 186);
+    background-color: rgb(186, 189, 190);
     cursor: pointer;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
+}
+
+.project-box{
+    grid-template-columns: 50px 1fr;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(49, 48, 48);
+    display: grid;
+    align-items: center;
+    border-radius: 5px;    
+}
+
+.project-box:hover{
+    background-color: rgb(146, 247, 176);
+    cursor: pointer;
+}
+
+.project-name{
+    display: grid;
+    font-size: 20px;
+    align-items: center;
+}
+
+#project-name-input{
+    display: none;
+    margin-left: 20px;
+    font-size: 20px;
+    height: 30px;
+    width: 200px;
+}
+
+.project-form{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-left: 20px;
+    width: 200px;
+    height: 30px;
+}
+
+.add-project-form{
+    background-color: rgb(108, 243, 108);
+    border: 1px greenyellow solid;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cancel-project-form{
+    background-color: rgb(245, 81, 81);
+    border: 1px rgb(247, 68, 68) solid;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cancel-project-form:hover{
+    background-color: rgb(243, 67, 67);
+    border: 1px gray solid;
+    cursor: pointer;
+}
+    
+.add-project-form:hover{
+    background-color: rgb(98, 230, 98);
+    border: 1px gray solid;
+    cursor: pointer;
+}
+    
+
+.add-project-task{
+    display: none;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 30px;
+    padding-left: 20px;
+    border-radius: 10px;
+    margin-right: 250px;
+}
+
+.add-project-task:hover{
+    cursor: pointer;
+    background-color: rgb(167, 208, 243);
 }

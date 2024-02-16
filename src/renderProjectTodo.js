@@ -1,20 +1,28 @@
-import { format } from 'date-fns';
-
-
-export function renderToday(tasks){
-const addTask = document.querySelector('.addtask');
-const currentDate = new Date();
-const formattedDate = format(currentDate, 'yyyy-MM-dd');
-const main_box = document.querySelector('.main-box');
+import { render } from "./render";
+import { projectArray } from "./projectObjects";
+import {clear} from './clear-todo'
+import { renderProject } from "./renderProject";
+export function projecEventListner(){
+const project = document.querySelectorAll('.project-box');
 const inbox_title = document.querySelector('.inbox-title');
-const addProjectTask = document.querySelector('.add-project-task');
-addProjectTask.style.display = 'none';
-addTask.style.display = 'none';
-inbox_title.textContent = 'Today';
-let j = 0;
+for(let i = 0; i < project.length; i++){
+    project[i].addEventListener('click', () =>{
+        
+        inbox_title.textContent = project[i].textContent;
+        clear();
+        renderProjectTodo(projectArray(i));
+    })
+}
+}
 
+export function renderProjectTodo(tasks){
+    const main_box = document.querySelector('.main-box');
+    const addTask = document.querySelector('.addtask')
+    addTask.style.display = 'none';
+    const addProjectTask = document.querySelector('.add-project-task');
+// const addTask = document.querySelector('.addtask');
 for(let i = 0; i < tasks.length; i++){
-    if(tasks[i].date === formattedDate){
+    console.log(tasks);
     const todo = document.createElement('div');
     todo.classList.add('todo');
     const title = document.createElement('div');
@@ -36,9 +44,8 @@ for(let i = 0; i < tasks.length; i++){
     todo.appendChild(checkbox); 
     todo.appendChild(title);
     todo.appendChild(date_box);
-    todo.style.gridRowStart = `${j + 2}`;
+    todo.style.gridRowStart = `${i + 2}`;
     main_box.appendChild(todo);
-    j++;
     }
-  }
+    addProjectTask.style.display = 'grid';
 }
