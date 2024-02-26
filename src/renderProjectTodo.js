@@ -2,15 +2,18 @@ import { render } from "./render";
 import { projectArray } from "./projectObjects";
 import {clear} from './clear-todo'
 import { renderProject } from "./renderProject";
+import { removeForm } from "./removeForm.js";
+import { removeProjectTodo } from "./removeProject.js";
+import { projectTodoDateEvent } from "./projectTodoDate.js";
 export function projecEventListner(){
 const project = document.querySelectorAll('.project-box');
 const inbox_title = document.querySelector('.inbox-title');
 for(let i = 0; i < project.length; i++){
     project[i].addEventListener('click', () =>{
-        
         inbox_title.textContent = project[i].textContent;
         clear();
         renderProjectTodo(projectArray(i));
+        removeForm();
     })
 }
 }
@@ -20,8 +23,9 @@ export function renderProjectTodo(tasks){
     const addTask = document.querySelector('.addtask')
     addTask.style.display = 'none';
     const addProjectTask = document.querySelector('.add-project-task');
-// const addTask = document.querySelector('.addtask');
-for(let i = 0; i < tasks.length; i++){
+    if(tasks.length){
+
+    for(let i = 0; i < tasks.length; i++){
     console.log(tasks);
     const todo = document.createElement('div');
     todo.classList.add('todo');
@@ -46,6 +50,8 @@ for(let i = 0; i < tasks.length; i++){
     todo.appendChild(date_box);
     todo.style.gridRowStart = `${i + 2}`;
     main_box.appendChild(todo);
-    }
+    }}
+    removeProjectTodo();
     addProjectTask.style.display = 'grid';
+    projectTodoDateEvent();
 }

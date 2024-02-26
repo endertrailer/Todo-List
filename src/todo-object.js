@@ -1,4 +1,4 @@
-let tasks = [{title: 'pizza'}, {title: 'zippa'}, {title: 'typing practice two hours'}];
+let tasks = [{title: 'walking'}, {title: 'typing'}, {title: 'studying'}];
 export function createTodo(title){
     
     if(title !== undefined){
@@ -11,4 +11,8 @@ export function createTodo(title){
 export function addDate(date, index){
     tasks[index].date = date;
     console.log(tasks);
+}
+
+export function removeObject(index){
+    tasks.splice(index,1);
 }

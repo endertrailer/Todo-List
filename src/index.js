@@ -3,14 +3,15 @@ import {addtask} from './addtask.js';
 import {clear} from './clear-todo.js'
 import { dateChange } from './dates.js';
 import { createTodo } from './todo-object.js';
-import { renderToday } from "./renderToday.js";
-import { renderWeek } from "./renderWeek.js";
+import { renderToday, renderWeek } from "./render.js";
 import { projectObjects } from "./projectObjects.js";
 import { renderProject } from "./renderProject.js";
 import { clearProjects } from "./clearProjects.js";
 import { addProject } from "./addProject.js";
 import { renderProjectTodo } from "./renderProjectTodo.js";
 import { projecEventListner } from "./renderProjectTodo.js";
+import { addProjectTodo } from "./addProjectTodo.js";
+// import { addProjectTask } from "./addProjectTodo.js";
 const week = document.getElementById('week');
 const today = document.getElementById('today');
 const inbox = document.getElementById('inboxbtn');
@@ -38,3 +39,4 @@ clearProjects();
 renderProject(projectObjects());
 addProject();
 projecEventListner();
+addProjectTodo()
