@@ -26,7 +26,6 @@ export function renderProjectTodo(tasks){
     if(tasks.length){
 
     for(let i = 0; i < tasks.length; i++){
-    console.log(tasks);
     const todo = document.createElement('div');
     todo.classList.add('todo');
     const title = document.createElement('div');

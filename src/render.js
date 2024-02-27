@@ -16,7 +16,6 @@ addProjectTask.style.display = 'none';
 addTask.style.display = 'grid';
 inbox_title.textContent = 'Inbox';
 for(let i = 0; i < tasks.length; i++){
-    console.log(tasks);
     const todo = document.createElement('div');
     todo.classList.add('todo');
     const title = document.createElement('div');

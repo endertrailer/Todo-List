@@ -10,7 +10,6 @@ export function createTodo(title){
 
 export function addDate(date, index){
     tasks[index].date = date;
-    console.log(tasks);
 }
 
 export function removeObject(index){
