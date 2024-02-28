@@ -3,9 +3,10 @@ import { removeForm } from "./removeForm.js";
 import { isThisWeek } from "date-fns";
 import { removeTodo } from "./removeTodo.js";
 import { format } from 'date-fns';
+import checkboxImg from './images/check_box_outline_blank_FILL0_wght400_GRAD-25_opsz24.svg';
 export function render(tasks){
     
-// const taskManager = document.querySelector('.taskmanager')
+
 const main_box = document.querySelector('.main-box');
 const inbox_title = document.querySelector('.inbox-title');
 const addTask = document.querySelector('.addtask');
@@ -32,7 +33,7 @@ for(let i = 0; i < tasks.length; i++){
     checkbox.classList.add('checkbox');
     
     
-    checkbox.src = '../src/images/check_box_outline_blank_FILL0_wght400_GRAD-25_opsz24.svg';
+    checkbox.src = checkboxImg;
     date_box.appendChild(dateInput);
     todo.appendChild(checkbox); 
     todo.appendChild(title);
@@ -76,7 +77,7 @@ for(let i = 0; i < tasks.length; i++){
     checkbox.classList.add('checkbox');
     
     
-    checkbox.src = '../src/images/check_box_outline_blank_FILL0_wght400_GRAD-25_opsz24.svg';
+    checkbox.src = checkboxImg;
     date_box.appendChild(dateInput);
     todo.appendChild(checkbox); 
     todo.appendChild(title);
@@ -117,7 +118,7 @@ for(let i = 0; i < tasks.length; i++){
     checkbox.classList.add('checkbox');
     
     
-    checkbox.src = '../src/images/check_box_outline_blank_FILL0_wght400_GRAD-25_opsz24.svg';
+    checkbox.src = checkboxImg;
     date_box.appendChild(dateInput);
     todo.appendChild(checkbox); 
     todo.appendChild(title);

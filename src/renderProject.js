@@ -1,5 +1,7 @@
 import { removeProject } from "./removeProject.js";
 import { projecEventListner } from "./renderProjectTodo.js";
+import assept from './images/assept-document.svg';
+import smallCrossImg from './images/cross-small.svg';
 export function renderProject(projects){
     const projectBody = document.querySelector('.project-body');
     const addProject = document.querySelector('.add-project');
@@ -8,7 +10,7 @@ export function renderProject(projects){
         box.classList.add('project-box');
         
         const inbox = document.createElement('img');
-        inbox.src = '../src/images/assept-document.svg';
+        inbox.src = assept;
         inbox.classList.add('inbox')
 
         const name = document.createElement('div');
@@ -17,7 +19,7 @@ export function renderProject(projects){
 
         const removeImg = document.createElement('img');
         removeImg.classList.add('project-remove');
-        removeImg.src = '../src/images/cross-small.svg';
+        removeImg.src = smallCrossImg;
         box.appendChild(inbox);
         box.appendChild(name);
         box.appendChild(removeImg)
@@ -31,7 +33,6 @@ const title = document.getElementById('project-todo-input');
 const addForm = document.querySelector('.project-todo-form');
 
 addTask.addEventListener("click", () => {
-    // addTask.style.gridRowStart = `${main_box.childElementCount + 1}`;
     title.style.display = 'grid';
     addForm.style.display = 'grid';
     addTask.style.display = 'none';

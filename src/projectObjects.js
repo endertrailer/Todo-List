@@ -1,11 +1,23 @@
 let projects = [{projectName:'Daily tasks'}, {projectName:'Art'}, {projectName:'Homeworks'}];
 let projectTodo = [[{title:'write'},{title:'eat'}, {title:'drink'}],[{title:'Draw'},{title:'Color'}], [{title:'Sen'},{title:'Mic'}, {title:'Dcc'}]];
+
+let storedProjects = JSON.parse(localStorage.getItem('projects'));
+let storedProjectTodo = JSON.parse(localStorage.getItem('projectTodo'));
+if(storedProjects){
+    projects = storedProjects;
+}
+
+if(storedProjectTodo){
+    projectTodo = storedProjectTodo;
+}
+
 let activeProject;
 export function projectObjects(name){
     if(name !== undefined && name !== null && name !== ''){
         projects.push({projectName: name});
         projectTodo.push([])
     }
+    localStorage.setItem('projects', JSON.stringify(projects));
     return projects;
 }
 
@@ -14,6 +26,7 @@ export function projectArray(index, title){
     if(title !== '' && title !== undefined){
         projectTodo[index].push({title: title})
     }
+    localStorage.setItem('projectTodo', JSON.stringify(projectTodo));
     return projectTodo[index]; 
 }
 
@@ -23,6 +36,7 @@ export function getActiveProject(){
 
 export function projectTodoDate(index,date){
     projectTodo[activeProject][index].date = date;
+    localStorage.setItem('projectTodo', JSON.stringify(projectTodo));
 }
 
 export function removeProjectIndex(index){
@@ -31,9 +45,13 @@ export function removeProjectIndex(index){
     if(index >= activeProject){
         activeProject--;
     }
+    localStorage.setItem('projects', JSON.stringify(projects));
 }
 
 export function removeProjectTodoIndex(index){
     projectTodo[activeProject].splice(index,1);
+    localStorage.setItem('projectTodo', JSON.stringify(projectTodo));
 }
+
+
 

@@ -5,6 +5,7 @@ import { renderProject } from "./renderProject";
 import { removeForm } from "./removeForm.js";
 import { removeProjectTodo } from "./removeProject.js";
 import { projectTodoDateEvent } from "./projectTodoDate.js";
+import checkboxImg from './images/check_box_outline_blank_FILL0_wght400_GRAD-25_opsz24.svg';
 export function projecEventListner(){
 const project = document.querySelectorAll('.project-box');
 const inbox_title = document.querySelector('.inbox-title');
@@ -42,7 +43,7 @@ export function renderProjectTodo(tasks){
     checkbox.classList.add('checkbox');
     
     
-    checkbox.src = '../src/images/check_box_outline_blank_FILL0_wght400_GRAD-25_opsz24.svg';
+    checkbox.src = checkboxImg;
     date_box.appendChild(dateInput);
     todo.appendChild(checkbox); 
     todo.appendChild(title);
