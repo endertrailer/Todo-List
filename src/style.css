@@ -69,6 +69,10 @@ html, *{
     font-weight: 900;
 }
 
+.clicked.task{
+    background-color: rgb(190, 186, 186);
+}
+
 .inbox{
     display: grid;
     width: 17px;
@@ -283,6 +287,10 @@ html, *{
 .project-box:hover{
     background-color: rgb(146, 247, 176);
     cursor: pointer;
+}
+
+.project-box.projectClicked{
+    background-color: rgb(146, 247, 176);
 }
 
 .project-name{

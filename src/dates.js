@@ -1,11 +1,11 @@
-import { addDate } from "./todo-object";
+import { addDate } from './todo-object';
 
-export function dateChange(){
-const dates = document.querySelectorAll('.date');
+export default function dateChange() {
+  const dates = document.querySelectorAll('.date');
 
-for(let i = 0; i < dates.length; i++){
-    dates[i].addEventListener('change', function() {
-        addDate(dates[i].value, i);
-    })
-}
+  for (let i = 0; i < dates.length; i += 1) {
+    dates[i].addEventListener('change', () => {
+      addDate(dates[i].value, i);
+    });
+  }
 }
