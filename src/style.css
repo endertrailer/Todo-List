@@ -106,7 +106,7 @@ html, *{
 .main-box{
     padding: 50px;
     display: grid;
-    grid-template-rows: 50px repeat(9,1fr);
+    grid-template-rows: 50px  repeat(auto-fill, minmax(50px, 1fr));
     gap: 10px;
 }
 
@@ -242,7 +242,7 @@ html, *{
 
 .project-body{
     display: grid;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows:  repeat(auto-fill, minmax(50px, 1fr));
     padding-top: none;
     /* padding: 25px; */
     padding-left: 25px;
